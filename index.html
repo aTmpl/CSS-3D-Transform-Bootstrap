@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Адаптивная галерея CSS 3D Transform & Bootstrap</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="author" href="https://plus.google.com/108911234048292569811" />
+<link rel="publisher" href="https://plus.google.com/106292100743979527533" />
+<link href="//atmpl.ru/assets/css/bootstrap.css" rel="stylesheet" />
+<script src="//atmpl.ru/assets/js/jquery-2.1.1.min.js"></script>
+<script src="//atmpl.ru/assets/js/bootstrap.min.js"></script>
+<style>
+.css3d {
+display: block; 
+width:240px; 
+height:160px;  
+margin:90px auto;
+perspective:1000px;
+}
+.css3d a.oneImg {
+background:url("//atmpl.ru/design/galleries/2014/css-3d/adaptive-atmpl.jpg");
+background-size:100% 100%;
+}
+.css3d a.twoImg {
+background:url("//atmpl.ru/design/galleries/2014/css-3d/adaptive-atmpl.jpg");
+background-size:100% 100%;
+}
+.css3d a.treeImg {
+background:url("//atmpl.ru/design/galleries/2014/css-3d/adaptive-atmpl.jpg");
+background-size:100% 100%;
+}
+.css3d a {
+display: block; 
+width: 100%; 
+height: 100%;
+background-size:0, cover;
+transform-style:preserve-3d;
+transition:all 0.5s;
+}
+.css3d:hover a {
+transform:rotateX(80deg);
+transform-origin:bottom;
+}
+.css3d a:after {
+content:''; 
+position:absolute; 
+left:0; 
+bottom:0; 
+width:100%; 
+height:36px;
+background:inherit; 
+background-size:cover, cover;
+background-position:bottom;
+transform: rotateX(90deg); 
+transform-origin:bottom;
+}
+.css3d a span {
+color:white; 
+text-transform:uppercase;
+position:absolute; 
+top:100%; 
+left:0; 
+width:100%;
+font-famaly:Georgia;
+font-size:14px; 
+font-weight:bold;
+padding-top:8px;
+text-align:center;
+transform:rotateX(-89.99deg); 
+transform-origin:top;
+z-index:1;
+}
+.css3d a.treeImg span { 
+color:green;
+}
+.css3d a:before {
+content:''; 
+position:absolute; 
+top:0; 
+left:0;
+width:100%; 
+height:100%;
+background:rgba(0, 0, 0, 0.5); 
+box-shadow:0 0 100px 50px rgba(0, 0, 0, 0.5);
+transition:all 0.5s; 
+opacity:0.15;
+transform:rotateX(95deg) translateZ(-80px) scale(0.75);
+transform-origin:bottom;
+}
+.css3d:hover a:before {
+opacity:1;
+box-shadow:0 0 25px 25px rgba(0, 0, 0, 0.5);
+transform:rotateX(0) translateZ(-60px) scale(0.85);
+}
+@media(min-width: 360px) {
+.css3d {
+width:320px; 
+height:240px;  
+margin:90px auto;
+}
+.css3d a:after { 
+height:41px;
+}
+.css3d a span {
+font-size:16px; 
+font-weight:bold;
+padding-top:10px;
+}
+}
+@media(min-width: 540px) {
+.css3d {
+width:480px; 
+height:320px;  
+}
+}
+@media(min-width: 990px) {
+.css3d {
+width:240px; 
+height:160px;  
+}
+.css3d a span {
+font-size:14px; 
+padding-top:8px;
+}
+}
+@media(min-width: 1208px) {
+.css3d {
+width:320px; 
+height:240px;  
+}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="row text-center">
+<h1 style="color:#666;text-shadow: 1px 1px 0px rgb(223, 223, 223), 2px 2px 0px rgb(185, 185, 185);">Адаптивная галерея CSS 3D Transform & Bootstrap</h1>
+<div class="col-md-12">
+
+<!--Начало первой тройки-->
+<div class="col-md-4">
+<div class="css3d">
+<a href="#" class="oneImg">
+<span>Адаптивный сайт</span>
+</a>
+</div>
+</div>
+<div class="col-md-4">
+<div class="css3d">
+<a href="#" class="twoImg">
+<span>Адаптивный сайт</span>
+</a>
+</div>
+</div>
+<div class="col-md-4">
+<div class="css3d">
+<a href="#" class="treeImg">
+<span>Адаптивный сайт</span>
+</a>
+</div>
+</div>
+<!--Конец первой тройки-->
+
+<!--Начало второй тройки-->
+<div class="col-md-4">
+<div class="css3d">
+<a href="#" class="oneImg">
+<span>Адаптивный сайт</span>
+</a>
+</div>
+</div>
+<div class="col-md-4">
+<div class="css3d">
+<a href="#" class="twoImg">
+<span>Адаптивный сайт</span>
+</a>
+</div>
+</div>
+<div class="col-md-4">
+<div class="css3d">
+<a href="#" class="treeImg">
+<span>Адаптивный сайт</span>
+</a>
+</div>
+</div>
+<!--Конец второй тройки-->
+
+</div>
+</div>
+</div>
+</body>
+</html>
